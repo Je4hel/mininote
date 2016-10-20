@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSansLight";
+    src: url("fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "OpenSansBold";
+    src: url("fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: "OpenSansLightItalic";
+    src: url("fonts/OpenSans-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: "Meslo";
+    src: url("fonts/MesloLGMDZ-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    resize: none;
+}
+
+.pull-right {
+    float: right;
+}
+
+.editor-wrapper {
+    position: relative;
+    padding: 10px;
+    padding-top: 5px;
+    font-family: OpenSans;
+    border: 1px solid whitesmoke;
+    box-shadow: lightgrey 1px 1px 2px -1px;
+}
+
+.editor-wrapper:hover > .editor-toolbar-hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.editor-toolbar {
+    padding-bottom: 5px;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 0.8em;
+    background-color: white;
+    list-style-type: none;
+
+    transition: all 0.2s;
+}
+
+.editor-toolbar-hover {
+    /*visibility: none;
+    opacity: 0;
+    position: absolute;
+    width: calc(100% - 20px);*/
+    text-align: right;
+}
+
+.editor-toolbar li {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.editor-toolbar li:last-child {
+    margin-right: 0;
+}
+
+.editor-toolbar li.hidden {
+    visibility: hidden;
+}
+
+.editor-toolbar .editor-toolbar-dropdown select {
+    -webkit-appearance: none;
+    padding: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.editor-toolbar .editor-toolbar-dropdown select:hover {
+    cursor: pointer;
+}
+
+.editor-toolbar .editor-toolbar-button:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+
+.editor-field {
+    width: 100%;
+    padding-top: 10px;
+
+    font-family: Meslo;
+    color: #7f7f7f;
+    border: none;
+}
+
+.editor-field-view {
+    color: black;
+    font-family: OpenSansLight;
+}
+
+.editor-field-view strong {
+    font-family: OpenSans;
+}
+
+.editor-field-view em {
+    font-family: OpenSansLightItalic;
+}
