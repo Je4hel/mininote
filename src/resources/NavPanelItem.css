@@ -1,0 +1,48 @@
+.navpanel-item {
+    padding: 10px;
+
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+
+    display: flex;
+}
+
+.navpanel-item:hover {
+    cursor: pointer;
+    position: relative;
+    z-index: 10000;
+    box-shadow: 0 0 3px 1px lightgrey;
+}
+
+.navpanel-item:active {
+    box-shadow: inset 0 0 3px 1px lightgrey;
+}
+
+.navpanel-separator {
+    padding: 25px 10px 10px 10px;
+}
+
+.navpanel-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navpanel-title {
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.navpanel-separator .navpanel-title {
+    font-family: OpenSansBold;
+    text-transform: uppercase;
+}
+
+.navpanel-text {
+    font-size: 0.8em;
+    color: grey;
+}
+
+.navpanel-separator .navpanel-text {
+    text-transform: lowercase;
+}
