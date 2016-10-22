@@ -1,9 +1,15 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import "../../public/global.css";
+import App from "./App";
 import TextEditor from "./TextEditor";
 import NavPanel from "./NavPanel";
 import NavPanelItem from "./NavPanelItem"
+
+storiesOf("App", module)
+    .add("No data", () => (
+        <App />
+    ))
 
 storiesOf("TextEditor", module)
     .addDecorator((story) => (

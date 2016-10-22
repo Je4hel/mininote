@@ -1,8 +1,6 @@
-.pull-right {
-    float: right;
-}
-
-.editor-wrapper {
+.TextEditor {
+    box-sizing: border-box;
+    width: 100%;
     position: relative;
     padding: 10px;
     padding-top: 5px;
@@ -12,7 +10,7 @@
     background-color: white;
 }
 
-.editor-wrapper:hover > .editor-toolbar-hover {
+.TextEditor:hover > .editor-toolbar-hover {
     visibility: visible;
     opacity: 1;
 }

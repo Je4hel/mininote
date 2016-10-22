@@ -5,16 +5,18 @@ class NavPanelItem extends Component {
     render () {
         let image = null;
         if (this.props.img) {
-            image = <img className="navpanel-img" src={this.props.img} />
+            image = <img className="img" src={this.props.img} />
         }
 
         return (
-            <div className={this.props.separator ? "navpanel-separator" : "navpanel-item"}
-                onClick={this.props.onClick}>
-                {image}
-                <div>
-                    <h2 className="navpanel-title">{this.props.title}</h2>
-                    <p className="navpanel-text">{this.props.text}</p>
+            <div className="NavPanelItem">
+                <div className={this.props.separator ? "separator" : "item"}
+                    onClick={this.props.onClick}>
+                    {image}
+                    <div>
+                        <h2 className="title">{this.props.title}</h2>
+                        <p className="text">{this.props.text}</p>
+                    </div>
                 </div>
             </div>
         );

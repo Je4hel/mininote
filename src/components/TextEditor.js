@@ -96,7 +96,7 @@ class TextEditor extends Component {
         }
 
         return (
-            <div className="editor-wrapper">
+            <div className="TextEditor">
                 {toolbar}
                 {editorContent}
             </div>

@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import Counter from "./Counter"
-import logo from '../resources/logo.svg';
 import '../resources/App.css';
+import NavPanel from "./NavPanel";
+import TextEditor from "./TextEditor";
 
 class App extends Component {
+    constructor () {
+        super();
+        this.state = {
+            allNotes: [],
+            openNote: null
+        }
+    }
+
     render() {
         return (
             <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <p className="App-intro">
-                    <Counter start={8} />
-                </p>
+                <NavPanel items={this.state.allNotes}/>
+                <TextEditor />
             </div>
         );
     }

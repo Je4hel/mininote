@@ -1,4 +1,4 @@
-.navpanel-item {
+.item {
     padding: 10px;
 
     background-color: white;
@@ -7,42 +7,42 @@
     display: flex;
 }
 
-.navpanel-item:hover {
+.item:hover {
     cursor: pointer;
     position: relative;
     z-index: 10000;
     box-shadow: 0 0 3px 1px lightgrey;
 }
 
-.navpanel-item:active {
+.item:active {
     box-shadow: inset 0 0 3px 1px lightgrey;
 }
 
-.navpanel-separator {
+.separator {
     padding: 25px 10px 10px 10px;
 }
 
-.navpanel-img {
+.img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 
-.navpanel-title {
+.title {
     font-size: 1em;
     font-weight: lighter;
 }
 
-.navpanel-separator .navpanel-title {
+.separator .title {
     font-family: OpenSansBold;
     text-transform: uppercase;
 }
 
-.navpanel-text {
+.text {
     font-size: 0.8em;
     color: grey;
 }
 
-.navpanel-separator .navpanel-text {
+.separator .text {
     text-transform: lowercase;
 }

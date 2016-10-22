@@ -5,7 +5,7 @@ import "../resources/NavPanel.css";
 class NavPanel extends Component {
     render() {
         return (
-            <div className="navpanel">
+            <div className="NavPanel">
                 {this.props.items.map((item) => {
                     return <NavPanelItem key={item.key} onClick={item.onClick} {...item} />
                 })}
