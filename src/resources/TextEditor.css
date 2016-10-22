@@ -1,35 +1,3 @@
-@font-face {
-    font-family: "OpenSans";
-    src: url("fonts/OpenSans-Regular.ttf");
-}
-
-@font-face {
-    font-family: "OpenSansLight";
-    src: url("fonts/OpenSans-Light.ttf");
-}
-
-@font-face {
-    font-family: "OpenSansBold";
-    src: url("fonts/OpenSans-Bold.ttf");
-}
-
-@font-face {
-    font-family: "OpenSansLightItalic";
-    src: url("fonts/OpenSans-LightItalic.ttf");
-}
-
-@font-face {
-    font-family: "Meslo";
-    src: url("fonts/MesloLGMDZ-Regular.ttf");
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    resize: none;
-}
-
 .pull-right {
     float: right;
 }
@@ -41,6 +9,7 @@
     font-family: OpenSans;
     border: 1px solid whitesmoke;
     box-shadow: lightgrey 1px 1px 2px -1px;
+    background-color: white;
 }
 
 .editor-wrapper:hover > .editor-toolbar-hover {
