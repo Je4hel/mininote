@@ -1,26 +1,26 @@
 @font-face {
     font-family: "OpenSans";
-    src: url("../src/resources/fonts/OpenSans-Regular.ttf");
+    src: url("fonts/OpenSans-Regular.ttf");
 }
 
 @font-face {
     font-family: "OpenSansLight";
-    src: url("../src/resources/fonts/OpenSans-Light.ttf");
+    src: url("fonts/OpenSans-Light.ttf");
 }
 
 @font-face {
     font-family: "OpenSansBold";
-    src: url("../src/resources/fonts/OpenSans-Bold.ttf");
+    src: url("fonts/OpenSans-Bold.ttf");
 }
 
 @font-face {
     font-family: "OpenSansLightItalic";
-    src: url("../src/resources/fonts/OpenSans-LightItalic.ttf");
+    src: url("fonts/OpenSans-LightItalic.ttf");
 }
 
 @font-face {
     font-family: "Meslo";
-    src: url("../src/resources/fonts/MesloLGMDZ-Regular.ttf");
+    src: url("fonts/MesloLGMDZ-Regular.ttf");
 }
 
 * {

@@ -5,7 +5,7 @@ class NavPanelItem extends Component {
     render () {
         let image = null;
         if (this.props.img) {
-            image = <img className="img" src={this.props.img} />
+            image = <img className="img" src={this.props.img} role="presentation" />
         }
 
         return (
