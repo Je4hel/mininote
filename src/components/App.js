@@ -4,11 +4,11 @@ import NavPanel from "./NavPanel";
 import TextEditor from "./TextEditor";
 
 class App extends Component {
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
         this.state = {
             allNotes: [],
-            openNote: null
+            openNote: props.openNote || null
         }
     }
 
@@ -16,7 +16,7 @@ class App extends Component {
         return (
             <div className="App">
                 <NavPanel items={this.state.allNotes}/>
-                <TextEditor />
+                <TextEditor content={this.state.openNote ? this.state.openNote.content : ""}/>
             </div>
         );
     }
