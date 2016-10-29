@@ -27,11 +27,11 @@ class TextEditor extends Component {
         });
     }
 
-    /** Switches from edit to view mode and vice versa */
-    switchEditorMode (event) {
-        if (this.props.allowEdit) {
+    /** Switches the editor to the specified mode */
+    switchToEditorMode (mode) {
+        if (this.props.allowEdit && mode !== this.state.mode) {
             this.setState({
-               mode: this.state.mode === TextEditor.mode.EDIT ? TextEditor.mode.VIEW : TextEditor.mode.EDIT
+               mode: this.state.mode = mode
            });
         }
     }
@@ -46,58 +46,25 @@ class TextEditor extends Component {
 
     render () {
         let editorContent = null;
-        let toolbar = null;
         if (this.state.mode === TextEditor.mode.EDIT) {
-            toolbar =
-                <ul className="editor-toolbar">
-                    <li className="editor-toolbar-dropdown">
-                        <select id="editorTextStyle">
-                            <option value="h1">Heading 1</option>
-                            <option value="h2">Heading 2</option>
-                            <option value="h3">Heading 3</option>
-                            <option value="p">Paragraph</option>
-                            <option value="blockquote">Quote</option>
-                            <option value="code">Code block</option>
-                        </select>
-                    </li>
-                    <li className="editor-toolbar-button">
-                        <i className="fa fa-fw fa-italic" aria-hidden="true"></i>
-                    </li>
-                    <li className="editor-toolbar-button">
-                        <i className="fa fa-fw fa-bold" aria-hidden="true"></i><
-                    /li>
-                    <li className="editor-toolbar-button">
-                        <i className="fa fa-fw fa-list-ul" aria-hidden="true"></i>
-                    </li>
-                    <li className="editor-toolbar-button">
-                        <i className="fa fa-fw fa-list-ol" aria-hidden="true"></i>
-                    </li>
-                    <li className="editor-toolbar-button" onClick={(e) => this.switchEditorMode(e)}>
-                        <i className="fa fa-fw fa-eye" aria-hidden="true"></i>
-                    </li>
-                </ul>
-
             editorContent =
-                <textarea className="editor-field editor-field-edit" { ...this.props }
-                    placeholder={this.props.placeholder} value={this.state.content}
-                    onChange={(e) => this.updateEditorContent(e)} />
+                <textarea { ...this.props } className="editor-field editor-field-edit"
+                    autoFocus={true} value={this.state.content} placeholder={this.props.placeholder}
+                    onChange={(e) => this.updateEditorContent(e)}
+                    onFocus={(e) => this.switchToEditorMode(TextEditor.mode.EDIT)}
+                    onClick={(e) => this.switchToEditorMode(TextEditor.mode.EDIT)}
+                    onBlur={(e) => this.switchToEditorMode(TextEditor.mode.VIEW)} />
         } else {
-            toolbar =
-                <ul className="editor-toolbar">
-                    <li className={"editor-toolbar-button " + (this.props.allowEdit ? "" : "hidden")}
-                        onClick={(e) => this.switchEditorMode(e)}>
-                        <i className="fa fa-fw fa-edit" aria-hidden="true"></i>
-                    </li>
-                </ul>
-
             editorContent =
                 <div className="editor-field editor-field-view"
-                    dangerouslySetInnerHTML={this.getHTMLFromMarkdown(this.state.content)} />
+                    dangerouslySetInnerHTML={this.getHTMLFromMarkdown(this.state.content)}
+                    onFocus={(e) => this.switchToEditorMode(TextEditor.mode.EDIT)}
+                    onClick={(e) => this.switchToEditorMode(TextEditor.mode.EDIT)}
+                    onBlur={(e) => this.switchToEditorMode(TextEditor.mode.VIEW)}  />
         }
 
         return (
             <div className="TextEditor">
-                {toolbar}
                 {editorContent}
             </div>
         );
